@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Header -->
+<header>
+    <div class="container">
+      <h1>My Blog</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Login and Signup Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+          <!-- Login Form -->
+          <div id="loginForm" class="form-container">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+              <input type="email" placeholder="Email" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit" class="submit-btn">Login</button>
+              <p>Don't have an account? <a href="javascript:void(0)" onclick="showSignup()">Sign Up</a></p>
+            </form>
+          </div>
+    
+          <!-- Signup Form -->
+          <div id="signupForm" class="form-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+              <input type="text" placeholder="Full Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit" class="submit-btn">Sign Up</button>
+              <p>Already have an account? <a href="javascript:void(0)" onclick="showLogin()">Login</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Button to open modal -->
+      <button class="open-modal-btn" onclick="openModal()">Login / Sign Up</button>
+    </div>
+  </header>
+</head>
+
+<body>
+  <!-- About Section -->
+<section class="about">
+  <div class="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to My Blog, your go-to destination for insightful articles on web development, design, and programming. Our mission is to empower developers and tech enthusiasts by providing valuable content that covers both the basics and the latest trends in the industry. Whether you're just starting your coding journey or are an experienced professional, you'll find tips, tutorials, and resources tailored to your needs. At My Blog, we believe in fostering a community where knowledge and creativity thrive. We aim to inspire innovation and encourage collaboration among developers worldwide. Our team comprises skilled professionals who bring expertise and passion to every article we share. From mastering frameworks to crafting stunning designs, we’ve got you covered. Dive into our engaging posts, expand your skills, and stay ahead in the fast-evolving tech world. Join us as we explore the art and science of web development together.</p>
+  </div>
+</section>
+
+    <!-- Main Body Content -->
+<div class="container">
+    <div class="content">
+      <div class="blog-slider">
+        <div class="slide" id="slide1">
+          <h2 class="post-title">Blog Post 1</h2>
+          <p class="post-date">April 19, 2024</p>
+          <p class="post-content">World Liver Day, 19 April 2024 - Importance, Theme and History</p>
+          <a href="https://www.pacehospital.com/world-liver-day#:~:text=World%20Liver%20Day%2C%2019%20April%202024%20%2D%20Importance%2C%20Theme%20and%20History" class="read-more" target="_blank">Read More</a>
+        </div>
+        <div class="slide" id="slide2">
+          <h2 class="post-title">Blog Post 2</h2>
+          <p class="post-date">April 26, 2024</p>
+          <p class="post-content">World IP Day - April 26, 2024 - IP and the SDGs: Building our common future with innovation and creativity</p>
+          <a href="https://www.wipo.int/en/web/ipday#:~:text=World%20IP%20Day%20%2D%20April%2026,future%20with%20innovation%20and%20creativity&text=World%20Intellectual%20Property%20Day%202024,to%20build%20our%20common%20future." class="read-more" target="_blank">Read More</a>
+        </div>
+        <div class="slide" id="slide3">
+          <h2 class="post-title">Blog Post 3</h2>
+          <p class="post-date">October 9, 2024</p>
+          <p class="post-content">National days on Wed Oct 9th, 2024</p>
+          <a href="https://www.daysoftheyear.com/days/oct/09/#:~:text=It's%20National%20Curves%20Day%2C%20Curious,Nurses%20Day%E2%80%A6%20and%20much%20more!" class="read-more" target="_blank">Read More</a>
+        </div>
+        <div class="slide" id="slide4">
+            <h2 class="post-title">Blog Post 4</h2>
+            <p class="post-date">December 10, 2024</p>
+            <p class="post-content">Human Rights Day (HRD) is celebrated annually around the world on 10 December every year.</p>
+            <a href="https://en.wikipedia.org/wiki/Human_Rights_Day#:~:text=Human%20Rights%20Day%20(HRD)%20is,on%2010%20December%20every%20year." class="read-more" target="_blank">Read More</a>
+          </div>
+          <div class="slide" id="slide5">
+            <h2 class="post-title">Blog Post 5</h2>
+            <p class="post-date">December 26, 2024</p>
+            <p class="post-content">BOXING DAY - December 26</p>
+            <a href="https://www.nationaldaycalendar.com/international/boxing-day-december-26#:~:text=Every%20year%20on%20December%2026th,19th%20century%20under%20Queen%20Victoria." class="read-more" target="_blank">Read More</a>
+          </div>
+          <div class="slider-controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+        </div>
+        <div class="sidebar">
+            <h3>Recent Posts</h3>
+            <ul>
+              <li><a href="#">How to Build a Blog</a></li>
+              <li><a href="#">5 Tips for Web Development</a></li>
+              <li><a href="#">Understanding JavaScript</a></li>
+            </ul>
+            <h3>Featured Posts</h3>
+      <ul>
+        <li><a href="#">Best Web Development Tools in 2024</a></li>
+        <li><a href="#">A Complete Guide to CSS Grid</a></li>
+        <li><a href="#">10 Tips for Better UI Design</a></li>
+      </ul>
+      <h3>Subscribe to Our Newsletter</h3>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <h3>Popular Tags</h3>
+      <div class="tags">
+        <a href="#">Web Development</a>
+        <a href="#">JavaScript</a>
+        <a href="#">CSS</a>
+        <a href="#">React</a>
+        <a href="#">Node.js</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Information Section -->
+<section class="contact-info">
+    <h2>Contact Us</h2>
+    <p>Feel free to contact us if you have any questions</p>
+    <ul>
+      <li>Email: <a href="mailto:rakeshkanna030@gmail.com">rakeshkanna030@gmail.com</a></li>
+      <li>Phone: +91 81790 69339</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-social-media">
+      <a href="https://www.linkedin.com/in/kanna-rakeshvarma/" target="_blank"><img src="linkedin.png" width="30" height="30"></a>
+      <a href="https://github.com/rakeshkanna93" target="_blank"><img src="github.png" width="30" height="30"></a>
+      <a href="https://www.instagram.com/rakesh_kanna___9393/" target="_blank"><img src="insta.jpg" width="30" height="30"></a>
+    </div>
+    <p>&copy; 2024 My Blog. All Rights Reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
+
+
